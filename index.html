@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Image Generator</title>
+    <style>
+        /* Styling for the body */
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            font-size: 2.8em;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        /* Styling for the container (for alignment) */
+        .container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for the input box */
+        input[type="text"] {
+            width: 400px;
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+            box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"]:focus {
+            box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.2);
+            background: #ffffff;
+        }
+
+        /* Styling for the button */
+        button {
+            background: linear-gradient(to right, #4caf50, #81c784);
+            color: #ffffff;
+            border: none;
+            margin-left: 10px;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #388e3c, #66bb6a);
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0px);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for the image preview */
+        img {
+            margin-top: 40px;
+            max-width: 80%;
+            height: auto;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        #loading {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text-to-Image Generator</h1>
+    <div class="container">
+        <input type="text" id="input" placeholder="Type your creative idea here...">
+        <button id="btn">Generate</button>
+    </div>
+    <div id="loading">
+        <img src="PVtR.gif" alt="Loading..." width="50">
+    </div>
+    <img id="image" alt="Generated Image" hidden>
+    <script src="s.js"></script>
+</body>
+</html>
